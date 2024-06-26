@@ -1,0 +1,62 @@
+Absolute Xpath, Relative Xpath
+
+id, class, type, text
+css selector
+xpath > 2 ms wait time
+
+Absolute xpath:
+
+/html/body/div[2]/div/section/figure/figcaption/div[2]
+
+Relative xpath:
+//*[@id='contact_form']
+
+//div[text()='payment']
+
+Basic format of relative xpath:
+//tagname[@attribute= 'Value']
+
+Contains():
+//*[contains(@id, 'nav')]
+Xpath=//*[contains(@type,'sub')]  Every tags which contains 'sub' in type
+Xpath=//*[contains(@name,'btn')] Every tags which contains 'btn' in name
+Xpath=//*[contains(@id,'message')] Every tags which contains 'message' in id
+Xpath=//*[contains(@href,'guru99.com’)] Every tags which contains 'guru99.com' in href
+Xpath=//h2[contains(text(),'Popular right now')] Every h2 tags which contains 'Popular right now' in visible text
+
+Starts-with:
+Xpath = //div[starts-with(@id, 'message')]
+
+End-with:
+Xpath = //div[ends-with(@id, 'message']
+
+Using OR & AND
+Xpath = //*[@type='submit' and @name='button']
+Xpath = //*[@type='submit' or @name='button']
+
+Text():
+Xpath=//*[text()='Watch the Videos']
+Xpath=//*[contains(text(),'Watch')]
+
+Child:
+//div[@id='main_navbar']
+Following: This function will return the following elements of the particular component.
+Xpath=//*[@type='text']//following::input
+
+By Index[i]:
+Xpath=//*[@type='text']//following::input[1]
+
+Child:
+Xpath=//*[@id='java_technologies']//child::li
+Xpath=//div[@class='cart_list']//a
+Selects all children elements of the current node
+
+Following-sibling (siblings on same level)
+xpath=//*[@type='submit']//following-sibling::input
+
+Preceding-sibling
+//div[@id='header']//following-sibling::div[2]
+
+.. going up one level:
+xpath=//*[@type='submit']/../span
+Xpath=//*[text()='ADD TO CART']/parent::div
