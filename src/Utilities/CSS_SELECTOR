@@ -1,0 +1,124 @@
+# --> for id
+By.cssSelector("#logout");
+By.cssSelector("a#logout");
+
+. --> for class
+By.cssSelector(".center");
+By.cssSelector("p.center");
+
+By.cssSelector("input");
+By.cssSelector("input[type='text']");
+By.cssSelector("input[type='text'][placeholder='First Name']");
+By.cssSelector("input.form-control[type='text']");
+
+*= --> contains
+^= --> starts-with
+$= --> ends-with
+
+input[class *= form] etc: control-form-box
+input[class ^= form] etc: form-control
+input[class $= form] etc: control-form
+
++ bitisik qardas
+<div id='profile'>
+    <h3>Mr. Neo</h3>
+    <p>The chosen one</p>
+</div>
+By.cssSelector("h3 + p");
+
+~ butun qardaslar
+<div id='profile'>
+    <h3>Mr. Neo</h3>
+    <p>The chosen one</p>
+    <img src='pic.jpeg'>
+</div>
+By.cssSelector("p ~ img");
+By.cssSelector("h3 ~ p");
+
+> child element
+<div id='profile'>
+    <h3>Mr. Neo</h3>
+    <p>The chosen one</p>
+    <img src='pic.jpeg'>
+</div>
+By.cssSelector("div > h3");
+By.cssSelector("#profile img");
+By.cssSelector("#profile p");
+
+:not
+<button type='button' class='submit'>Submit</button>
+<button type='button' class='Add'>Add</button>
+<input type='text'>
+<input type='radio'>
+<input type='email'>
+
+By.cssSelector("button:not(.submit)"); butonlar içerisinde class adı submit olmayanları getir
+By.cssSelector("input:not(.radio)"); inputlar içerisinde class adı radio olmayanları getir
+
+:nth-child
+<div id='profile'>
+    <h3>Mr. Neo</h3>
+    <p>The chosen one</p>
+    <img src='pic.jpeg'>
+    <button type='button' class='submit'>Submit</button>
+    <button type='button' class='Add'>Add</button>
+    <input type='text'>
+    <input type='radio'>
+    <input type='email'>
+</div>
+
+By.cssSelector("#profile >*:nth-child(2)"); --> p
+By.cssSelector("#profile >button:nth-child(3)"); --> null
+By.cssSelector("#profile >*:nth-child(8)"); --> input (email)
+
+:nth-last-child
+<div id='profile'>
+    <h3>Mr. Neo</h3>
+    <p>The chosen one</p>
+    <img src='pic.jpeg'>
+    <button type='button' class='submit'>Submit</button>
+    <button type='button' class='Add'>Add</button>
+    <input type='text'>
+    <input type='radio'>
+    <input type='email'>
+</div>
+By.cssSelector("#profile >*:nth-last-child(2)"); --> input (radio)
+By.cssSelector("#profile >button:nth-last-child(3)"); --> null
+By.cssSelector("#profile >*:nth-last-child(8)"); --> h3
+
+:nth-of-type
+
+<div id="profile">
+    <h3>Mr. Neo</h3>
+    <p>The chosen one</p>
+    <button  type="button" class="submit">Submit</button>
+    <button  type="button" class="Add">Add</button>
+    <input type="text">
+    <input type="radio">
+    <input type="email">
+    <img src="pic1.png">
+</div>
+
+By.cssSelector("#profile >button:nth-of-type(2)"); Selects second button tag (class = Add)
+By.cssSelector("#profile >button:nth-of-type(3)"); Null
+By.cssSelector("#profile >input:nth-of-type(2)"); Selects second input tag (type = radio)
+By.cssSelector("#profile >input:nth-of-type(7)"); Null
+By.cssSelector("#profile >img:nth-of-type(1)"); Selects img tag
+
+:disabled
+
+<input type="text" name="name" class="required"/>
+<input type="text" name="surname" class="required" disabled/>
+<input type="text" name="address"/>
+<input type="email" name="email" disabled/>
+
+By.cssSelector("input:disabled"); Selects second and fourth inputs
+
+:checked
+<input type="checkbox" value="1" checked/>
+<input type="checkbox" value="2" checked/>
+<input type="checkbox" value="3"/>
+<input type="checkbox" value="4"/>
+
+By.cssSelector("input:checked"); Selects first and second inputs
+By.cssSelector("input:not(:checked)"); Selects third and fourth inputs#logout");
