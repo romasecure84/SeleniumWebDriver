@@ -24,4 +24,7 @@ public class BaseDriver {
         MyFunctions.Wait(3);
         driver.quit();
     }
+    public static void  Wait(){
+        MyFunctions.Wait(2);
+    }
 }
