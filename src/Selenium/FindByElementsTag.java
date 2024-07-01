@@ -20,6 +20,6 @@ public class FindByElementsTag extends BaseDriver {
             }
         }
 
-        WaitQuit();
+        WaitQuit(2);
     }
 }

@@ -17,6 +17,6 @@ public class Assert extends BaseDriver {
             System.out.println("Test Passed");
         }else System.out.println("Test Failed");
 
-        WaitQuit();
+        WaitQuit(2);
     }
 }

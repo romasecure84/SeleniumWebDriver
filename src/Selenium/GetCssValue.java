@@ -17,6 +17,6 @@ public class GetCssValue extends BaseDriver {
         System.out.println("background-color: "+ searchBox.getCssValue("background-color"));
 
 
-        WaitQuit();
+        WaitQuit(2);
     }
 }

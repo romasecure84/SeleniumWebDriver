@@ -26,9 +26,9 @@ public class SelectStructure extends BaseDriver {
         searchButton.click();
 
         WebElement message = driver.findElement(By.xpath("(//span[contains(text(),'Macbook')])[1]"));
-        Wait();
+        Wait(2);
         Assert.assertTrue(message.isDisplayed());
 
-        WaitQuit();
+        WaitQuit(2);
     }
 }

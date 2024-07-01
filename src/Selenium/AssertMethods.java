@@ -19,6 +19,6 @@ public class AssertMethods extends BaseDriver {
         Assert.assertEquals(message, assertMessage.getText(), "Test Failed");
         Assert.assertTrue(assertMessage.isDisplayed(), "Message is Displayed");
 
-        WaitQuit();
+        WaitQuit(2);
     }
 }

@@ -12,14 +12,14 @@ public class Navigating extends BaseDriver {
         fakeAlerts.click();
         System.out.println(driver.getCurrentUrl());
         driver.findElement(By.id("fakealert")).click();
-        Wait();
+        Wait(2);
 
         driver.navigate().back();
         System.out.println(driver.getCurrentUrl());
-        Wait();
+        Wait(2);
 
         driver.navigate().forward();
         System.out.println(driver.getCurrentUrl());
-        WaitQuit();
+        WaitQuit(2);
     }
 }
