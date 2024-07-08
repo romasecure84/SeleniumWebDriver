@@ -18,7 +18,7 @@ public class BaseDriver {
 
 
         ChromeOptions chromeOptions = new ChromeOptions();
-        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NONE);
+        chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         driver = new ChromeDriver(chromeOptions);
         driver.manage().window().maximize();
 
