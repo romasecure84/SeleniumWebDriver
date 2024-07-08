@@ -1,0 +1,11 @@
+Interview Suali:
+
+Action class nedir, haralarda istifade olunur, nece istifade edirsen?
+
+-- Sag klik, double klik, HoverOver, Dragdrop
+   Xususi duymeler(klaviatura knopkalari), istiqamet duymeleri bunlari edebilen sinifdir
+
+-- WebElementlerde istifade olunur
+
+-- Actions actions = new Actions(driver); ==>brauzerde action etmek isteyirem
+  Actions : doubleClick, RightClick, HoverOver, Xususi duymeler(ctrl, shift, istiqamet duymeleri), drag, drop

@@ -1,0 +1,20 @@
+ExplicitExpectedConditions
+
+.titleIs -> title bu olana qeder gozle
+.titleContains -> title ın da bu kelme kecene qeder gozle
+.urlToBe -> url bu olana qeder gozle
+.urlContains -> url de bu kelme kecene qeder gozle
+.visibilityOfElementLocated -> element DOM da var ve gorunur olana qeder gozle
+.visibilityOfTheElement -> element gorunene qeder gozle
+.InvisibilityOfTheElement -> element yox olana qeder gozle
+.elementToBeClickable -> element kliklene bilir olana qeder gozle
+.elementToBeSelected -> element secilebilir olana qeder gozle
+.textToBe -> elementin teksti gorunene qeder gozle
+.alertIsPresent()  -> alert cixana qeder gozle
+.visibilityOfAllElementsLocatedBy -> locator ile butn elementler gorunene qeder gozle
+.visibilityOfAllElements -> Verilen elementler listindeki butun elementler gorunene qeder gozle
+.numberOfElementsToBe  -> verilen locatora sahib lementlerin sayi bu olana qeder gozle
+.numberOfElementsToBeLessThan -> verilen locatora sahib olan elementlerin sayi bundan az olana qeder gozle
+.numberOfElementsToBeMoreThan -> verilen locatora sahib olan elementlerin sayi bundan cox olana qeder gozle
+.elementStaleness -> verilen element boyatlamasi kecene qeder gozle
+.attributeToBe(By locator, String attribute, String value) –> Attribute olaraq mueyyen bir deyere sahib WebElement’in olması sherti

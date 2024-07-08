@@ -1,0 +1,16 @@
+Alertleri nece kontrol edersiniz, nece handle edersiniz?
+
+driver.switchTo().alert() ==> alerte kecmek
+
+komandalari:
+
+   accept : Ok, tesdiq etmek
+   dismiss : Cancel, legv etmek
+   sendKeys : yazi gondermek
+   getText : alertin yazisini almaq
+
+
+    driver.switchTo().alert().accept()
+    driver.switchTo().alert().dismiss()
+    driver.switchTo().alert().sendKeys()
+    driver.switchTo().alert().getText();
