@@ -3,16 +3,13 @@ package Selenium;
 import Utilities.BaseDriver;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-import java.nio.file.WatchEvent;
 import java.time.Duration;
 
-public class IFrame extends BaseDriver {
+public class Frame extends BaseDriver {
     @Test
     public void Test() {
         driver.get("https://www.hyrtutorials.com/p/frames-practice.html");
