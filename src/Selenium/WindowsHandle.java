@@ -7,11 +7,13 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+import java.util.Set;
 
-public class Windows extends BaseDriver {
+public class WindowsHandle extends BaseDriver {
     @Test
     public void Test() {
         driver.get("https://www.selenium.dev/");
+        String mainPageId = driver.getWindowHandle();
         List<WebElement> blankLists = driver.findElements(By.xpath("//a[@target='_blank']"));
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -23,6 +25,14 @@ public class Windows extends BaseDriver {
                 System.out.println(e.getAttribute("href"));
             }
         }
+
+        Set<String> windowsIDList = driver.getWindowHandles();
+
+        for (String id : windowsIDList){
+            System.out.println("id = " + id);
+        }
+        Wait(3);
+        driver.switchTo().window(mainPageId);
 
         WaitQuit(5);
     }
