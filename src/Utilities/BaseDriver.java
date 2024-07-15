@@ -3,6 +3,7 @@ package Utilities;
 import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
@@ -14,7 +15,8 @@ public class BaseDriver {
     static {
 
         Logger logger = Logger.getLogger("");
-        logger.setLevel(Level.SEVERE); //Xetalari gostermek ucun
+        logger.setLevel(Level.SEVERE);
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY, "true");
 
 
         ChromeOptions chromeOptions = new ChromeOptions();
